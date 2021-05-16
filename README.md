@@ -1,27 +1,22 @@
 # YoutubeAutomationProject
 
-An Application that automates a WatchLater Youtube Playlist. Using the Youtube Data API, webscraping, and browser automation.
+DESCRIPTION: 
+An Application that automates a WatchLater Youtube Playlist. Using the Youtube Data API v3, webscraping, and browser automation.
+
+IMPLEMENTATION TO PRIVATE YOUTUBE ACCOUNT. 
+- steps:
+  - get credentials for Youtube Data API v3
+  - create file config_API.py #secrets_file with your API Key
+  - then will be accessed in Script via YoutubeAPI_connection.py
+  
+PACKAGE INSTALLATION: 
+will need 
+- google-api-python-client	2.4.0	2.4.0
 
 
-Outline of Project
-- will need directories...
-  - youtube api --> 
-    - connection to api file
-    - getting subscriber list file
-  - automation (every chrome login) --> every time login to website will run the script 
-  - webscraping --> to return all videos on page 
-    - locators 
-    - pages 
-    - parsers
+INSTALLATION.. In your interpreter..
 
-- Libraries needed
-  - libraries to use Google API 
-    - google-api-python-client
-  - chrome driver stuff for automation 
-  - webscraping
-    - beautiful soup 
-    - requests 
+'''
+pip install google-api-python-client
+'''
 
-
-Notes:
-- make sure to not publish with my api_key.. lol
