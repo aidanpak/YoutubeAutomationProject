@@ -1,6 +1,12 @@
 from googleapiclient.discovery import build
 
-api_key = 'AIzaSyBw1R3xD_LlKNZ8DMQTzIzFklq-ZA1CT_U'
+steps:
+    - name:api_key
+      run:
+        echo $API
+      env:
+        API: ${{ secrets.API_KEY_SECRET }}
+
 
 class APIConnection:
     Youtube = build('youtube', 'v3', developerKey=api_key)
