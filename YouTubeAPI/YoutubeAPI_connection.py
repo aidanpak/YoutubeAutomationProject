@@ -1,11 +1,9 @@
 from googleapiclient.discovery import build
+import config_API #secrets_file with your API Key
 
-steps:
-    - name:api_key
-      run:
-        echo $API
-      env:
-        API: ${{ secrets.API_KEY_SECRET }}
+#accessing your API key from secrets file
+api_key = config_API.API_key
+
 
 
 class APIConnection:
