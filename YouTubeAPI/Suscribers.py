@@ -1,21 +1,34 @@
+'''
+issue right now is that subscribes maximum is on different page..
+'''
+
 from YoutubeAPI_connection import APIConnection
+
 
 
 
 def get_subscriber_list():
     request = APIConnection.Youtube.subscriptions().list(
-        part = 'snippet',
-        channelId = 'UC1v5V2rZ061NYDqwbHFt83A',
+        part="snippet",
+        channelId="UC1v5V2rZ061NYDqwbHFt83A",
+        maxResults = 50
     )
-    list = request.execute()
-    for parameter in list:
-        print(parameter)
-
-    return list
-    [snippet]
+    response = request.execute()
+    return response
 
 
-print(get_subscriber_list())
+
+def unpack_subscribers_dict(text):
+    items= text['items']
+    length = len(items)
+    for sub in items:
+        print(sub['snippet']['title'])
+
+
 
 def subscriber_list_usernames(list):
     pass
+
+subscribers_dict = get_subscriber_list()
+print(unpack_subscribers_dict(subscribers_dict))
+
