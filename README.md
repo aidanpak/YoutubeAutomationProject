@@ -4,10 +4,10 @@ An Application that automates a WatchLater Youtube Playlist. Using the Youtube D
 
 
 Outline of Project
-- will need directories and python files...
-  - youtube api --> to get subscriber list 
-    - connection to api 
-    - getting subscriber list 
+- will need directories...
+  - youtube api --> 
+    - connection to api file
+    - getting subscriber list file
   - automation (every chrome login) --> every time login to website will run the script 
   - webscraping --> to return all videos on page 
     - locators 
